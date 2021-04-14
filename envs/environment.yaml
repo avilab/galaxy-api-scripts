@@ -1,0 +1,8 @@
+name: bioblend
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - bioblend
+  - black
+  - python=3
