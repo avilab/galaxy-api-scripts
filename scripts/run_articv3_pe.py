@@ -53,6 +53,8 @@ gi = GalaxyInstance(
 
 # Copy of COVID-19: variation analysis on ARTIC PE data + collapse collection shared by user ulvit
 WORKFLOW_ID = "301230389d3c5421"
+ARTICv3_BED_ID = "c8960aaeee5e5b0c"
+NC_045512_ID = "56d20db643753f34"
 
 files = get_files(sys.argv[1])
 elements = {k: parse_elements(v) for k, v in files.items()}
@@ -72,9 +74,9 @@ for run, element in elements.items():
     )["id"]
     # Run workflow
     inputs = {}
-    inputs["0"] = {"src": "hda", "id": "c8960aaeee5e5b0c"}
-    inputs["1"] = {"src": "hda", "id": "c8960aaeee5e5b0c"}
-    inputs["2"] = {"src": "hda", "id": "56d20db643753f34"}
+    inputs["0"] = {"src": "hda", "id": ARTICv3_BED_ID}
+    inputs["1"] = {"src": "hda", "id": ARTICv3_BED_ID}
+    inputs["2"] = {"src": "hda", "id": NC_045512_ID}
     inputs["3"] = {"src": "hdca", "id": collection_id}
     invocation = gi.workflows.invoke_workflow(
         WORKFLOW_ID, inputs=inputs, history_id=history_id, import_inputs_to_history=True
