@@ -1,6 +1,6 @@
 # galaxy-api-scripts
 
-_Ad hoc_ scripts to run ARTIC COVID19 Galaxy workflows.
+Tired of clicking through Galaxy? Here are some _ad hoc_ scripts to run ARTIC COVID19 Galaxy workflow.
 
 # run_articv3_pe
 
